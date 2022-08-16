@@ -1,6 +1,7 @@
 #include "sort.h"
 #include <stdio.h>
 #include <stdlib.h>
+
 /**
  * quick_sort - sorts an array of integers in ascending order
  * using the quick sort sort algorithm
@@ -19,6 +20,7 @@ recursive_quick_sort(array, size, 0, size - 1);
  * @start: start index
  * @end: end index
 */
+
 void recursive_quick_sort(int *array, size_t size, int start, int end)
 {
 int p;
@@ -57,7 +59,7 @@ for (j = start; j <= end - 1; j++)
 }
 swap_int1(array, i + 1, end);
 print_array(array, size);
-return (i+1);
+return (i + 1);
 }
 
 /**
@@ -73,7 +75,6 @@ tmp = array[a];
 array[a] = array[b];
 array[b] = tmp;
 }
-
 /**
  * print_array - Prints an array of integers
  *
@@ -82,15 +83,15 @@ array[b] = tmp;
  */
 void print_array(const int *array, size_t size)
 {
-    size_t i;
+	size_t i;
 
-    i = 0;
-    while (array && i < size)
-    {
-        if (i > 0)
-            printf(", ");
-        printf("%d", array[i]);
-        ++i;
-    }
-    printf("\n");
+	i = 0;
+while (array && i < size)
+{
+if (i > 0)
+printf(", ");
+printf("%d", array[i]);
+++i;
+}
+printf("\n");
 }
