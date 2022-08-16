@@ -1,5 +1,6 @@
 #include "sort.h"
 #include <stdio.h>
+#include <stdlib.h>
 /**
  * quick_sort - sorts an array of integers in ascending order
  * using the quick sort sort algorithm
@@ -71,4 +72,25 @@ int tmp;
 tmp = array[a];
 array[a] = array[b];
 array[b] = tmp;
+}
+
+/**
+ * print_array - Prints an array of integers
+ *
+ * @array: The array to be printed
+ * @size: Number of elements in @array
+ */
+void print_array(const int *array, size_t size)
+{
+    size_t i;
+
+    i = 0;
+    while (array && i < size)
+    {
+        if (i > 0)
+            printf(", ");
+        printf("%d", array[i]);
+        ++i;
+    }
+    printf("\n");
 }
